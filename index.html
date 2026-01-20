@@ -1,3 +1,4 @@
+<!-- index.html (with GPS Camera + Zoomify) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,213 +6,265 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indigo Apps Co</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
   <style>
-    :root {
-      --purple: #5a189a;
-      --text: #111;
-      --muted: #6b7280;
-      --border: rgba(17, 24, 39, 0.12);
-      --bg: #ffffff;
-      --card: #f7f7fb;
+    :root{
+      --bg:#fbfbfd;
+      --text:#14141a;
+      --muted:#5a5f6a;
+      --line:#e7e7ee;
+      --brand:#4B0082;
+      --brand2:#6a2bbf;
+      --shadow: 0 10px 30px rgba(20,20,26,.08);
+      --radius:16px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      background: radial-gradient(1200px 500px at 50% -100px, rgba(75,0,130,.10), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+    }
+    .wrap{
+      max-width: 1040px;
+      margin: 28px auto 60px;
+      padding: 0 18px;
     }
 
-    * {
-      box-sizing: border-box;
+    /* Header */
+    header.site-header{
+      background: rgba(255,255,255,.9);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(20,20,26,.05);
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
     }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-    }
-
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 20px 60px;
-    }
-
-    /* HEADER */
-
-    header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 0 36px;
-  border-bottom: 1px solid var(--border);
-}
-
-    .brand {
-      display: flex;
-      align-items: center;
+    .brand{
+      display:flex;
+      align-items:center;
       gap: 12px;
+      text-decoration:none;
+      color:var(--text);
+      min-width: 220px;
     }
-
-   .brand img {
-  width: 76px;
-  height: 76px;
-  border-radius: 20px;
-  }
-    .brand span {
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    nav a {
-      margin-left: 18px;
-      text-decoration: none;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    nav a:hover {
-      color: var(--text);
-    }
-
-    /* INTRO */
-    .intro {
-      margin-top: 48px;
-      max-width: 640px;
-    }
-
-    .intro h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .intro p {
-      font-size: 17px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 14px;
-    }
-
-    .contact {
-      font-size: 15px;
-    }
-
-    .contact a {
-      color: var(--purple);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    /* APPS */
-    .section-title {
-      margin-top: 56px;
-      margin-bottom: 18px;
-      font-size: 14px;
-      letter-spacing: 0.14em;
-      color: var(--muted);
-    }
-
-    .app-card {
-      max-width: 720px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
-    }
-
-    .app-row {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .app-row img {
+    .brand img{
       width: 64px;
       height: 64px;
-      border-radius: 14px;
-      flex-shrink: 0;
+      object-fit: contain;
+      display:block;
     }
-
-    .app-info h2 {
-      margin: 0 0 6px;
-      font-size: 20px;
+    .brand span{
+      font-weight: 700;
+      letter-spacing: .2px;
+      font-size: 18px;
     }
-
-    .app-info p {
-      margin: 0 0 14px;
-      font-size: 15px;
+    nav.site-nav{
+      display:flex;
+      align-items:center;
+      gap: 18px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav.site-nav a{
       color: var(--muted);
-      line-height: 1.5;
+      text-decoration:none;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      line-height: 1;
+    }
+    nav.site-nav a:hover{
+      color: var(--text);
+      background: rgba(75,0,130,.06);
     }
 
-    .button {
-      display: inline-block;
-      padding: 10px 22px;
-      background: var(--purple);
-      color: #fff;
-      text-decoration: none;
+    /* Hero */
+    .hero{ margin-top: 34px; padding: 10px 2px; }
+    .hero h1{
+      margin: 0 0 10px;
+      font-size: 52px;
+      line-height: 1.05;
+      letter-spacing: -1px;
+    }
+    .hero p{
+      margin: 0 0 14px;
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 740px;
+      line-height: 1.6;
+    }
+
+    .contact{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.8);
       border-radius: 999px;
-      font-size: 14px;
+      color: var(--muted);
+      text-decoration:none;
       font-weight: 600;
     }
+    .contact strong{ color: var(--brand); font-weight: 800; }
+    .contact:hover{ box-shadow: 0 8px 20px rgba(20,20,26,.08); }
 
-    /* FOOTER */
-    footer {
-      margin-top: 64px;
-      font-size: 14px;
+    .section-title{
+      margin: 40px 0 14px;
       color: var(--muted);
+      letter-spacing: .2em;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    /* App cards */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .card{
+      background: rgba(255,255,255,.85);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .app{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 18px;
+      flex-wrap:wrap;
+    }
+    .app-left{
+      display:flex;
+      align-items:center;
+      gap: 16px;
+      min-width: 280px;
+    }
+    .app-icon{
+      width: 62px;
+      height: 62px;
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,.06);
+      background: #fff;
+      object-fit: cover;
+      display:block;
+    }
+    .app h3{ margin:0; font-size: 22px; }
+    .app p{ margin:6px 0 0; color: var(--muted); line-height: 1.5; }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color: #fff;
+      text-decoration:none;
+      font-weight: 800;
+      border: 0;
+      min-width: 210px;
+      box-shadow: 0 12px 24px rgba(75,0,130,.22);
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn img{ width: 18px; height: 18px; display:block; }
+
+    .btn.secondary{
+      background: #ffffff;
+      color: var(--brand);
+      border: 1px solid rgba(75,0,130,.20);
+      box-shadow: none;
+    }
+    .btn.secondary:hover{
+      background: rgba(75,0,130,.06);
+      transform: translateY(-1px);
+    }
+
+    footer{ margin-top: 44px; color: var(--muted); font-size: 14px; }
+
+    @media (max-width: 720px){
+      .hero h1{ font-size: 40px; }
+      .brand img{ width: 56px; height: 56px; }
+      header.site-header{ padding: 12px 14px; }
+      nav.site-nav{ gap: 10px; }
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-
-    <header>
-      <div class="brand">
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Indigo Apps Co Home">
         <img src="logo.png" alt="Indigo Apps Co Logo" />
         <span>Indigo Apps Co</span>
-      </div>
-      <nav>
+      </a>
+
+      <nav class="site-nav" aria-label="Site navigation">
         <a href="#apps">Apps</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
       </nav>
     </header>
 
-    <section class="intro">
+    <section class="hero">
       <h1>Indigo Apps Co</h1>
-      <p>
-        We build simple, powerful mobile apps with a clean design and practical features.
-      </p>
-      <div class="contact">
-        Want to talk? Just drop one at:
-        <a href="mailto:contact@indigoapp.co">contact@indigoapp.co</a>
-      </div>
-    </section>
+      <p>We build simple, powerful mobile apps with a clean design and practical features.</p>
 
-    <div id="apps" class="section-title">OUR APPS</div>
+      <a class="contact" href="mailto:contact@indigoapp.co">
+        <strong>contact@indigoapp.co</strong>
+      </a>
 
-    <div class="app-card">
-      <div class="app-row">
-        <img src="gps-camera.png" alt="GPS Camera app icon" />
-        <div class="app-info">
-          <h2>GPS Camera</h2>
-          <p>
-            Capture photos with location, date, compass, and essential metadata.
-          </p>
-          <a
-            class="button"
-            href="https://play.google.com/store/apps/details?id=com.indigo.gpscamera"
-            target="_blank"
-            rel="noopener"
-          >
-            Get on Google Play
-          </a>
+      <div class="section-title" id="apps">OUR APPS</div>
+
+      <div class="grid">
+        <!-- GPS Camera -->
+        <div class="card">
+          <div class="app">
+            <div class="app-left">
+              <img class="app-icon" src="gps-camera.png" alt="GPS Camera app icon" />
+              <div>
+                <h3>GPS Camera</h3>
+                <p>Capture photos with location, date, compass, and essential metadata.</p>
+              </div>
+            </div>
+
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.indigo.gpscamera" target="_blank" rel="noopener">
+              <img src="ic_play_store.png" alt="" />
+              Get on Google Play
+            </a>
+          </div>
+        </div>
+
+        <!-- Zoomify -->
+        <div class="card">
+          <div class="app">
+            <div class="app-left">
+              <!-- Add a zoomify.png to your repo, or keep this as logo.png for now -->
+              <img class="app-icon" src="zoomify.png" alt="Zoomify app icon" onerror="this.onerror=null;this.src='logo.png';" />
+              <div>
+                <h3>Zoomify</h3>
+                <p>Zoom, enhance, and fine-tune your photos with quick, simple tools.</p>
+              </div>
+            </div>
+
+            <!-- Replace the # with your real store link when ready -->
+            <a class="btn secondary" href="#" onclick="return false;" aria-disabled="true">
+              Coming soon
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <footer>
-      © 2025 Indigo Apps Co
-    </footer>
-
+      <footer>© 2025 Indigo Apps Co</footer>
+    </section>
   </div>
 </body>
 </html>
