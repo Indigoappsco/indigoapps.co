@@ -257,9 +257,47 @@ a{ color: inherit; }
 /* Mobile */
 @media (max-width: 860px){
   .container{ margin-top: 14px; }
+
+  /* stack everything nicely */
   .grid{ grid-template-columns: 1fr; }
-  .brand img{ width: 56px; height: 56px; }
-  .topbar{ border-radius: 20px; }
+
+  /* header becomes two rows: brand then nav */
+  .topbar{
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .brand{
+    min-width: 0;
+    justify-content: flex-start;
+  }
+
+  .brand img{
+    width: 64px;   /* a bit bigger on mobile */
+    height: 64px;
+  }
+
+  /* nav becomes pill buttons */
+  .nav{
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .nav a{
+    padding: 10px 12px;
+    border: 1px solid rgba(17,24,39,0.10);
+    background: rgba(255,255,255,0.75);
+    border-radius: 999px;
+    font-size: 13px;
+  }
+
+  /* app cards */
   .appRow{ flex-direction: column; align-items: flex-start; }
   .btn{ width: 100%; }
+
+  /* reduce big spacing */
+  .card.pad{ padding: 18px; }
 }
