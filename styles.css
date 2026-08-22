@@ -301,3 +301,115 @@ a{ color: inherit; }
   /* reduce big spacing */
   .card.pad{ padding: 18px; }
 }
+
+/* Homepage side card */
+.sideCard{
+  align-self: start;
+}
+
+/* Privacy hub */
+.privacyHub{
+  margin-top: 18px;
+}
+.privacyIntro{
+  max-width: 760px;
+}
+.privacyIntro h1{
+  margin: 0 0 10px;
+  font-size: clamp(34px, 5vw, 50px);
+  letter-spacing: -0.8px;
+}
+.privacyGrid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+.privacyAppCard{
+  display:flex;
+  flex-direction:column;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid rgba(17,24,39,0.10);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(75,0,130,0.035), rgba(109,40,217,0.015));
+}
+.privacyAppTop{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+.privacyAppTop h2{
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+.packageName{
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  word-break: break-all;
+}
+.privacyBtn{
+  margin-top: auto;
+  align-self: flex-start;
+}
+.privacyNote{
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(75,0,130,0.14);
+  background: rgba(75,0,130,0.045);
+  color: #4b5563;
+  line-height: 1.55;
+}
+
+/* Individual app policy pages */
+.policyHeader{
+  display:flex;
+  align-items:center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.policyIcon{
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 1px solid rgba(17,24,39,0.10);
+  background: #fff;
+  flex: 0 0 auto;
+}
+.policyEyebrow{
+  margin: 0 0 3px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.policyHeader h1{
+  margin: 0 0 4px;
+}
+.policyHeader .meta{
+  margin: 0;
+}
+.policyBack{
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(17,24,39,0.10);
+}
+.policyBack a{
+  color: var(--purple);
+  font-weight: 800;
+  text-decoration: none;
+}
+.policyBack a:hover{
+  text-decoration: underline;
+}
+
+@media (max-width: 700px){
+  .privacyGrid{ grid-template-columns: 1fr; }
+  .privacyBtn{ width: 100%; }
+  .policyHeader{ align-items:flex-start; }
+  .policyIcon{ width: 60px; height: 60px; border-radius: 17px; }
+}
