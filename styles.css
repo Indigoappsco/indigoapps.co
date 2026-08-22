@@ -47,8 +47,8 @@ a{ color: inherit; }
   min-width: 220px;
 }
 .brand img{
-  width: 76px;              /* Slightly larger Indigo Apps Co logo */
-  height: 76px;
+  width: 84px;              /* Larger Indigo Apps Co logo */
+  height: 84px;
   border-radius: 16px;
   object-fit: contain;
   display:block;
@@ -275,8 +275,8 @@ a{ color: inherit; }
   }
 
   .brand img{
-    width: 70px;
-    height: 70px;
+    width: 76px;
+    height: 76px;
   }
 
   /* nav becomes pill buttons */
