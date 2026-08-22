@@ -413,3 +413,13 @@ a{ color: inherit; }
   .policyHeader{ align-items:flex-start; }
   .policyIcon{ width: 60px; height: 60px; border-radius: 17px; }
 }
+
+.btnDisabled{
+  opacity: 0.72;
+  cursor: default;
+  box-shadow: none;
+}
+.btnDisabled:hover,
+.btnDisabled:active{
+  transform: none;
+}
