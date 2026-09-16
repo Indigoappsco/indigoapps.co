@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indigo Apps Co</title>
+  <meta name="description" content="Indigo Apps Co builds simple, practical mobile apps with clean design and useful everyday features.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -11,7 +12,7 @@
 <body>
   <div class="container">
     <header class="topbar">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Indigo Apps Co home">
         <img src="logo.png" alt="Indigo Apps Co Logo">
         <div class="title">
           <strong>Indigo Apps Co</strong>
@@ -26,99 +27,126 @@
       </nav>
     </header>
 
-    <section class="grid">
-      <!-- Left -->
-      <div class="card pad">
-        <h1 class="h1">Indigo Apps Co</h1>
-        <p class="lead">We build simple, powerful mobile apps with clean design and practical features.</p>
+    <main class="home">
+      <section class="homeHero">
+        <div class="heroCopy">
+          <p class="eyebrow">INDIGO APPS CO</p>
+          <h1>Useful apps.<br><span>Beautifully simple.</span></h1>
+          <p class="heroLead">
+            We create focused mobile tools with clean design, practical features,
+            and an experience that stays out of your way.
+          </p>
+          <a class="heroLink" href="#apps">Explore our apps <span aria-hidden="true">↓</span></a>
+        </div>
 
-        <div class="kicker" id="apps">Our Apps</div>
+        <div class="heroMark" aria-hidden="true">
+          <div class="heroGlow"></div>
+          <img src="logo.png" alt="">
+        </div>
+      </section>
 
-        <div class="apps">
-          <!-- GPS Camera -->
-          <div class="appRow">
-            <div class="appLeft">
-              <img class="appIcon" src="gps-camera.png" alt="GPS Camera icon">
-              <div class="appText">
+      <section class="appsSection" id="apps">
+        <div class="sectionHeading">
+          <div>
+            <p class="eyebrow">OUR APPS</p>
+            <h2>Made for everyday use</h2>
+          </div>
+          <p>Four focused tools, each built around one job and designed to do it well.</p>
+        </div>
+
+        <div class="appGrid">
+          <article class="appCard">
+            <div class="appCardTop">
+              <img class="appIcon appIconLarge" src="gps-camera.png" alt="GPS Camera icon">
+              <div class="appIdentity">
                 <h3>GPS Camera</h3>
-                <p>Capture photos with location, date, compass, and essential metadata.</p>
+                <span class="appType">Camera &amp; location</span>
               </div>
             </div>
-
-            <a class="btn" href="https://play.google.com/store/apps/details?id=com.indigo.gpscamera" target="_blank" rel="noopener">
-              Get on Google Play
+            <p class="appDescription">
+              Capture photos with location, date, compass, and essential metadata.
+            </p>
+            <a class="storeBtn" href="https://play.google.com/store/apps/details?id=com.indigo.gpscamera" target="_blank" rel="noopener">
+              Get on Google Play <span aria-hidden="true">↗</span>
             </a>
-          </div>
+          </article>
 
-          <!-- Zoomify -->
-          <div class="appRow">
-            <div class="appLeft">
-              <img class="appIcon" src="zoomify_icon.png" alt="Zoomify icon">
-              <div class="appText">
+          <article class="appCard">
+            <div class="appCardTop">
+              <img class="appIcon appIconLarge" src="zoomify_icon.png" alt="Zoomify icon">
+              <div class="appIdentity">
                 <h3>Zoomify</h3>
-                <p>Zoom, enhance, and fine-tune your photos with quick, simple tools.</p>
+                <span class="appType">Zoom camera</span>
               </div>
             </div>
-
-            <a class="btn" href="https://play.google.com/store/apps/details?id=com.indigo.zoomify" target="_blank" rel="noopener">
-              Get on Google Play
+            <p class="appDescription">
+              Zoom, enhance, and fine-tune your photos with quick, simple tools.
+            </p>
+            <a class="storeBtn" href="https://play.google.com/store/apps/details?id=com.indigo.zoomify" target="_blank" rel="noopener">
+              Get on Google Play <span aria-hidden="true">↗</span>
             </a>
-          </div>
+          </article>
 
-          <!-- Angle Meter: Inclinometer -->
-          <div class="appRow">
-            <div class="appLeft">
-              <img class="appIcon" src="angle-meter.png" alt="Angle Meter: Inclinometer icon">
-              <div class="appText">
+          <article class="appCard">
+            <div class="appCardTop">
+              <img class="appIcon appIconLarge" src="angle-meter.png" alt="Angle Meter: Inclinometer icon">
+              <div class="appIdentity">
                 <h3>Angle Meter: Inclinometer</h3>
-                <p>Measure angles, tilt, and slope with live readings, saved measurements, and flexible display modes.</p>
+                <span class="appType">Angles &amp; slope</span>
               </div>
             </div>
-
-            <a class="btn" href="https://play.google.com/store/apps/details?id=com.indigo.inclinometer" target="_blank" rel="noopener">
-              Get on Google Play
+            <p class="appDescription">
+              Measure angles, tilt, and slope with live readings, saved measurements, and flexible display modes.
+            </p>
+            <a class="storeBtn" href="https://play.google.com/store/apps/details?id=com.indigo.inclinometer" target="_blank" rel="noopener">
+              Get on Google Play <span aria-hidden="true">↗</span>
             </a>
-          </div>
+          </article>
 
-          <!-- Hueify – Color Picker -->
-          <div class="appRow">
-            <div class="appLeft">
-              <img class="appIcon" src="hueify.png" alt="Hueify – Color Picker icon">
-              <div class="appText">
+          <article class="appCard appCardHueify">
+            <div class="appCardTop">
+              <img class="appIcon appIconLarge" src="hueify.png" alt="Hueify – Color Picker icon">
+              <div class="appIdentity">
                 <h3>Hueify – Color Picker</h3>
-                <p>Identify colors with your camera or photos, copy color codes, and save your favorite shades.</p>
+                <span class="appType">Color detection</span>
               </div>
             </div>
+            <p class="appDescription">
+              Identify colors with your camera or photos, copy color codes, and save your favorite shades.
+            </p>
+            <span class="storeBtn storeBtnDisabled" aria-disabled="true">Coming soon</span>
+          </article>
+        </div>
+      </section>
 
-            <span class="btn" aria-disabled="true">
-              Coming Soon
-            </span>
-          </div>
+      <section class="studioStrip">
+        <div class="studioBlock">
+          <p class="eyebrow">ABOUT</p>
+          <h2>Small tools, thoughtfully made.</h2>
+          <p>
+            Indigo Apps Co builds lightweight apps that solve real problems with a focus on speed,
+            clarity, and reliability.
+          </p>
         </div>
 
-        <div class="footer">© 2026 Indigo Apps Co</div>
+        <div class="studioDivider" aria-hidden="true"></div>
+
+        <div class="studioBlock contactBlock">
+          <p class="eyebrow">CONTACT</p>
+          <h2>Questions or feedback?</h2>
+          <p>For support, partnerships, or general questions, email us any time.</p>
+          <a class="contactPill" href="mailto:contact@indigoapps.co">contact@indigoapps.co</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="siteFooter">
+      <span>© 2026 Indigo Apps Co</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
       </div>
-
-      <!-- Right -->
-      <aside class="card pad sideCard">
-        <div class="stack">
-          <div>
-            <h3 class="smallTitle">Contact</h3>
-            <p class="muted">For support, partnerships, or questions — email us any time.</p>
-            <div style="margin-top:12px;">
-              <a class="pill" href="mailto:contact@indigoapps.co">contact@indigoapps.co</a>
-            </div>
-          </div>
-
-          <div class="divider"></div>
-
-          <div>
-            <h3 class="smallTitle">About</h3>
-            <p class="muted">Indigo Apps Co builds lightweight apps that solve real problems fast — with a focus on speed, clarity, and reliability.</p>
-          </div>
-        </div>
-      </aside>
-    </section>
+    </footer>
   </div>
 </body>
 </html>
