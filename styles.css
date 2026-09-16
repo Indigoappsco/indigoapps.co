@@ -866,3 +866,47 @@ a{ color:inherit; }
   .btn{ width:100%; }
   .card.pad{ padding:18px; }
 }
+
+
+/* Homepage simplification */
+.brandLogoOnly{
+  min-width:0;
+}
+
+.brandLogoOnly img{
+  width:76px;
+  height:76px;
+  border-radius:18px;
+}
+
+.home{
+  margin-top:18px;
+}
+
+.appsSection{
+  padding-top:42px;
+}
+
+.portfolioTitle{
+  margin:0;
+  font-size:clamp(38px,5.5vw,62px);
+  line-height:1.02;
+  letter-spacing:-.05em;
+  max-width:720px;
+}
+
+@media (max-width:700px){
+  .brandLogoOnly img{
+    width:64px;
+    height:64px;
+    border-radius:16px;
+  }
+
+  .appsSection{
+    padding-top:26px;
+  }
+
+  .portfolioTitle{
+    font-size:clamp(36px,11vw,50px);
+  }
+}
