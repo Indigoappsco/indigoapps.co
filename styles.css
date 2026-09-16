@@ -640,3 +640,68 @@ a{color:inherit}
   .btn{width:100%}
   .card.pad{padding:18px}
 }
+
+
+/* Header refinement — larger logo, no oversized white header card */
+.topbar{
+  min-height:auto;
+  background:transparent;
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  padding:8px 14px 12px;
+}
+
+.brandLogoOnly img{
+  width:170px;
+  height:104px;
+  object-fit:contain;
+}
+
+.nav{
+  gap:6px;
+  padding:6px;
+  border-radius:999px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.82);
+  box-shadow:0 8px 24px rgba(44,20,74,.06);
+}
+
+.nav a{
+  padding:10px 15px;
+  border-radius:999px;
+}
+
+.homeSimple{
+  margin-top:6px;
+}
+
+@media (max-width:700px){
+  .topbar{
+    padding:4px 4px 9px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:5px;
+  }
+
+  .brandLogoOnly img{
+    width:138px;
+    height:84px;
+  }
+
+  .nav{
+    width:auto;
+    padding:4px;
+  }
+
+  .nav a{
+    padding:8px 11px;
+    font-size:12px;
+  }
+
+  .homeSimple{
+    margin-top:4px;
+  }
+}
