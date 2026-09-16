@@ -705,3 +705,85 @@ a{color:inherit}
     margin-top:4px;
   }
 }
+
+
+/* Mobile header + first-screen refinement */
+@media (max-width:700px){
+  .topbar{
+    padding:0 0 8px !important;
+    gap:0 !important;
+    align-items:center !important;
+  }
+
+  .brandLogoOnly{
+    width:220px;
+    height:116px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+
+  .brandLogoOnly img{
+    width:220px !important;
+    height:116px !important;
+    object-fit:contain;
+    transform:scale(1.42);
+    transform-origin:center center;
+  }
+
+  .nav{
+    margin-top:-6px;
+    justify-content:center;
+    width:auto !important;
+    padding:4px 6px !important;
+    gap:2px !important;
+  }
+
+  .nav a{
+    padding:9px 13px !important;
+    font-size:13px !important;
+  }
+
+  .homeSimple{
+    margin-top:2px !important;
+  }
+
+  .appsPanel{
+    padding:19px 18px 22px !important;
+    border-radius:22px !important;
+  }
+
+  .appsHeader{
+    margin-bottom:16px !important;
+  }
+
+  .appsHeader h1{
+    font-size:31px !important;
+    line-height:1.08 !important;
+    letter-spacing:-.035em !important;
+  }
+
+  .appsIntro{
+    font-size:14px !important;
+  }
+
+  .sectionKicker{
+    margin-bottom:7px !important;
+    font-size:10px !important;
+  }
+
+  .appCard{
+    min-height:0 !important;
+    padding:18px !important;
+  }
+
+  .appDescription{
+    margin:15px 0 17px !important;
+    font-size:14px !important;
+  }
+
+  .storeBtn{
+    padding:9px 14px !important;
+  }
+}
