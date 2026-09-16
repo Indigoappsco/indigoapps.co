@@ -11,15 +11,20 @@
 <body>
   <div class="shell">
 
-    <header>
-      <a href="index.html" aria-label="Indigo Apps Co home">
-        <img class="logo" src="indigo-logo.png" alt="Indigo Apps Co">
+    <header class="siteHeader">
+      <a class="brand" href="index.html" aria-label="Indigo Apps Co home">
+        <img src="logo.png" alt="Indigo Apps Co logo">
+        <div class="brandText">
+          <strong>Indigo Apps Co</strong>
+          <span>Simple, powerful mobile apps</span>
+        </div>
       </a>
 
-      <nav aria-label="Primary">
-        <a href="#apps">Apps</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+      <nav class="siteNav" aria-label="Primary">
+        <a class="navBtn navActive" href="#apps">Apps</a>
+        <a class="navBtn" href="privacy.html">Privacy</a>
+        <a class="navBtn" href="terms.html">Terms</a>
+        <a class="navBtn navContact" href="mailto:contact@indigoapps.co">Contact</a>
       </nav>
     </header>
 
@@ -28,7 +33,6 @@
         <div class="eyebrow">OUR APPS</div>
         <h1>Apps made to be useful.</h1>
       </div>
-
       <p>Simple mobile tools with clean design and practical features.</p>
     </section>
 
@@ -42,15 +46,10 @@
             <p class="label">Camera &amp; location</p>
           </div>
         </div>
-
         <p class="desc">Capture photos with location, date, compass, and essential metadata.</p>
-
         <a class="btn"
            href="https://play.google.com/store/apps/details?id=com.indigo.gpscamera"
-           target="_blank"
-           rel="noopener">
-          Get on Google Play
-        </a>
+           target="_blank" rel="noopener">Get on Google Play</a>
       </article>
 
       <article class="card">
@@ -61,15 +60,10 @@
             <p class="label">Zoom camera</p>
           </div>
         </div>
-
         <p class="desc">Zoom, enhance, and fine-tune your photos with quick, simple tools.</p>
-
         <a class="btn"
            href="https://play.google.com/store/apps/details?id=com.indigo.zoomify"
-           target="_blank"
-           rel="noopener">
-          Get on Google Play
-        </a>
+           target="_blank" rel="noopener">Get on Google Play</a>
       </article>
 
       <article class="card">
@@ -80,15 +74,10 @@
             <p class="label">Angles &amp; slope</p>
           </div>
         </div>
-
         <p class="desc">Measure angles, tilt, and slope with live readings and saved measurements.</p>
-
         <a class="btn"
            href="https://play.google.com/store/apps/details?id=com.indigo.inclinometer"
-           target="_blank"
-           rel="noopener">
-          Get on Google Play
-        </a>
+           target="_blank" rel="noopener">Get on Google Play</a>
       </article>
 
       <article class="card hue">
@@ -99,17 +88,19 @@
             <p class="label">Color detection</p>
           </div>
         </div>
-
         <p class="desc">Pick colors from your camera or photos, copy color codes, and save your favorites.</p>
-
         <span class="soon">Coming soon</span>
       </article>
 
     </section>
 
-    <section class="bottom">
-      <p>Indigo Apps Co builds lightweight apps focused on clarity, speed, and everyday usefulness.</p>
-      <a href="mailto:contact@indigoapps.co">contact@indigoapps.co</a>
+    <section class="contactStrip">
+      <div>
+        <div class="eyebrow">CONTACT</div>
+        <h3>Questions, feedback, or support?</h3>
+        <p>We’re happy to hear from you about any Indigo Apps Co app.</p>
+      </div>
+      <a class="emailBtn" href="mailto:contact@indigoapps.co">contact@indigoapps.co</a>
     </section>
 
     <footer>
